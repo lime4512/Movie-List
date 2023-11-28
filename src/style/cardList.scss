@@ -1,4 +1,13 @@
-.cardList-container ul {
+.cardList {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.cardList-item {
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.cardList-item:last-child {
+	margin-right: 0px;
 }

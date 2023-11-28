@@ -8,7 +8,7 @@ export const CardList = () => {
 	useEffect(() => {
 		const MovieApi = async () => {
 			fetch(
-				'https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_POPULAR_MOVIES&page=1',
+				'https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=1',
 				{
 					headers: {
 						'Content-Type': 'application/json',
@@ -23,12 +23,12 @@ export const CardList = () => {
 	}, [])
 	console.log(data)
 	return (
-		<section>
+		<section className='CardList-container'>
 			<h1>Фильмы:</h1>
-			<div className='cardList-container'>
-				<ul>
+			<div className='cardList-content'>
+				<ul className='cardList'>
 					{data.map(item => (
-						<li key={Math.random()}>
+						<li key={Math.random()} className='cardList-item'>
 							<Card
 								title={item.nameRu}
 								img={item.posterUrlPreview}

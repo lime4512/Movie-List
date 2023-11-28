@@ -8,8 +8,8 @@ export const Card = ({ title, img, ratingImdb }) => {
 					loader={() => `${img}`}
 					src={img}
 					alt='Img'
-					height={100}
-					width={168}
+					fill={true}
+					className='imgTotal-card'
 				/>
 			</div>
 			<div className='card-content'>

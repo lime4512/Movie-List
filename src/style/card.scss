@@ -1,11 +1,24 @@
 .card-container {
 	height: 314px;
 	width: 168px;
-	background-color: rgb(107, 107, 107);
-	margin: 0 5px 5px 0;
+	background-color: black;
+	border-radius: 8px;
 }
 
 .card-img {
-	display: block;
-	height: 200px;
+	border-radius: 8px;
+	position: relative;
+	object-fit: cover;
+	height: 250px;
+	width: 170px;
+}
+
+.imgTotal-card {
+	border-radius: 8px;
+}
+
+.card-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
