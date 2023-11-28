@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import '../../style/cardList.scss'
 import { Card } from './Card'
 
-export const CardList = () => {
+export const CardList = ({ page }) => {
 	const [data, setData] = useState([])
 
 	useEffect(() => {
 		const MovieApi = async () => {
 			fetch(
-				'https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=1',
+				`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=TOP_250_MOVIES&page=${page}`,
 				{
 					headers: {
 						'Content-Type': 'application/json',
@@ -20,11 +20,11 @@ export const CardList = () => {
 				.then(data => setData(data.items))
 		}
 		MovieApi()
-	}, [])
-	console.log(data)
+	}, [page])
 	return (
-		<section className='CardList-container'>
+		<section className='cardList-container'>
 			<h1>Фильмы:</h1>
+			<span>Страница Номер:{page}</span>
 			<div className='cardList-content'>
 				<ul className='cardList'>
 					{data.map(item => (
