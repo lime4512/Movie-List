@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import '../../style/cardList.scss'
 import { Card } from './Card'
+import { Loader } from '../loader/Loader'
 
 export const CardList = ({ page }) => {
+	const [isLoading, setIsLoading] = useState(true)
 	const [data, setData] = useState([])
 
 	useEffect(() => {
@@ -20,23 +22,28 @@ export const CardList = ({ page }) => {
 				.then(data => setData(data.items))
 		}
 		MovieApi()
+		setIsLoading(false)
 	}, [page])
 	return (
 		<section className='cardList-container'>
 			<h1>Фильмы:</h1>
 			<span>Страница Номер:{page}</span>
 			<div className='cardList-content'>
-				<ul className='cardList'>
-					{data.map(item => (
-						<li key={Math.random()} className='cardList-item'>
-							<Card
-								title={item.nameRu}
-								img={item.posterUrlPreview}
-								ratingImdb={item.ratingImdb}
-							/>
-						</li>
-					))}
-				</ul>
+				{isLoading ? (
+					<Loader />
+				) : (
+					<ul className='cardList'>
+						{data.map(item => (
+							<li key={Math.random()} className='cardList-item'>
+								<Card
+									title={item.nameRu}
+									img={item.posterUrlPreview}
+									ratingImdb={item.ratingImdb}
+								/>
+							</li>
+						))}
+					</ul>
+				)}
 			</div>
 		</section>
 	)

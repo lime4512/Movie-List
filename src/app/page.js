@@ -1,6 +1,5 @@
 'use client'
 import { CardList } from '@/components/Card/CardList'
-
 import './globals.scss'
 import { useState } from 'react'
 import Pagination from '@mui/material/Pagination'
