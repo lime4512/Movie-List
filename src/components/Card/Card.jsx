@@ -1,6 +1,6 @@
 import '../../style/card.scss'
 import Image from 'next/image'
-export const Card = ({ title, img, ratingImdb }) => {
+export const Card = ({ titleRu, titleEn, img, ratingImdb }) => {
 	return (
 		<div className='card-container'>
 			<div className='card-img'>
@@ -9,12 +9,19 @@ export const Card = ({ title, img, ratingImdb }) => {
 					src={img}
 					alt='Img'
 					fill={true}
+					unoptimized={true}
 					className='imgTotal-card'
 				/>
 			</div>
 			<div className='card-content'>
-				<h2 className='card-title'>{title}</h2>
-				<p className='card-rating'>{ratingImdb} Рейтинг</p>
+				<h2 className='card-title'>
+					{titleRu == undefined ? titleEn : titleRu}
+					
+				</h2>
+
+				<p className='card-rating'>
+					{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb} Рейтинг`}
+				</p>
 			</div>
 		</div>
 	)

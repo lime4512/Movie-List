@@ -36,7 +36,8 @@ export const CardList = ({ page }) => {
 						{data.map(item => (
 							<li key={Math.random()} className='cardList-item'>
 								<Card
-									title={item.nameRu}
+									titleRu={item.nameRu}
+									titleEn={item.nameEu}
 									img={item.posterUrlPreview}
 									ratingImdb={item.ratingImdb}
 								/>

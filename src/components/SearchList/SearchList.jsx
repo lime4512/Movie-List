@@ -16,25 +16,33 @@ export const SearchList = ({ searchValue }) => {
 			)
 				.then(res => res.json())
 				.then(data => setSearchData(data.films))
+				.catch(err => {
+					setSearchData([])
+					console.log(err)
+				})
 		}
 		MovieApi()
 	}, [searchValue])
-
+	console.log(searchData)
 	return (
 		<div>
 			<h1>Фильмы</h1>
-			<h1>{searchValue}</h1>
-			<ul className='searchList-content'>
-				{searchData.map(item => (
-					<li key={Math.random()} className='searchList-item '>
-						<Card
-							title={item.nameRu}
-							img={item.posterUrlPreview}
-							ratingImdb={item.ratingImdb}
-						/>
-					</li>
-				))}
-			</ul>
+			{searchData.length == 0 ? (
+				<h1>Фильм не найден!!!!</h1>
+			) : (
+				<ul className='searchList-content'>
+					{searchData.map(item => (
+						<li key={Math.random()} className='searchList-item '>
+							<Card
+								titleRu={item.nameRu}
+								titleEn={item.nameEn}
+								img={item.posterUrlPreview}
+								ratingImdb={item.rating}
+							/>
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	)
 }
