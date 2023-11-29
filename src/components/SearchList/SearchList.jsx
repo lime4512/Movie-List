@@ -23,12 +23,13 @@ export const SearchList = ({ searchValue }) => {
 		}
 		MovieApi()
 	}, [searchValue])
-	console.log(searchData)
 	return (
 		<div>
-			<h1>Фильмы</h1>
 			{searchData.length == 0 ? (
-				<h1>Фильм не найден!!!!</h1>
+				<div className='searchList-err'>
+					<h1 className='searchList-err-title'>По запросу ничего не найдено</h1>
+					<p className='searchList-err-subtitle'>Уточни слово поиска или посмотри наши рекомендации</p>
+				</div>
 			) : (
 				<ul className='searchList-content'>
 					{searchData.map(item => (

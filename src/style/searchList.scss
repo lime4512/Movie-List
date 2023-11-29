@@ -1,4 +1,26 @@
 .searchList-content {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.searchList-item {
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.searchList-item:last-child {
+	margin-right: 0px;
+}
+
+.searchList-err {
+	text-align: center;
+}
+
+.searchList-err-title {
+	font-weight: 700;
+	font-size: 35px;
+}
+
+.searchList-err-subtitle {
 }

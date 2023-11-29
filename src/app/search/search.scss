@@ -1,0 +1,35 @@
+.main-search {
+	margin: 0 auto;
+	padding: 0 5px;
+	width: 1088px;
+}
+
+.search-title {
+	margin: 15px 0;
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.search-input-content {
+	display: flex;
+}
+
+.search-input-content {
+	border-bottom: 2px solid #212023;
+	padding: 7px 0;
+	margin-bottom: 10px;
+}
+
+.search-input-img {
+	transform: rotateY(180deg);
+}
+
+.search-input {
+	font-style: 400 18px 'Roboto', sans-serif;
+	background-color: inherit;
+	width: 100%;
+	border: none;
+	padding: 0 5px;
+	outline: none;
+	border: none;
+}
