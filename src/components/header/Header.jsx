@@ -1,9 +1,12 @@
 import '../../style/header.scss'
+import Link from 'next/link'
 export const Header = () => {
 	return (
 		<header>
 			<div className='header-logo'>
-				MOVIE<span>LIST</span>
+				<Link href='/'>
+					MOVIE<span>LIST</span>
+				</Link>
 			</div>
 			<ul className='header-nav'>
 				<li className='nav-link'>
@@ -28,7 +31,9 @@ export const Header = () => {
 			</ul>
 
 			<div className='header-login'>
-				<input type='text' className='header-inp' />
+				<Link href='/search' className='header-btn'>
+					Поиск
+				</Link>
 				<button className='header-btn'>Вход</button>
 			</div>
 		</header>
