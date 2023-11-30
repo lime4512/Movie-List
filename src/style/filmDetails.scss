@@ -1,0 +1,20 @@
+.film-content {
+	display: flex;
+}
+
+.film-img {
+	border-radius: 8px;
+	position: relative;
+	object-fit: cover;
+	height: 453px;
+	width: 302px;
+}
+
+.film-title-ru {
+	font-weight: 700;
+	font-size: 35px;
+}
+
+.film-genres {
+	display: flex;
+}

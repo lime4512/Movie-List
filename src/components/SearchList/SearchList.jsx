@@ -1,6 +1,7 @@
 import { Card } from '../Card/Card'
 import '../../style/searchList.scss'
 import { useEffect, useState } from 'react'
+
 export const SearchList = ({ searchValue }) => {
 	const [searchData, setSearchData] = useState([])
 	useEffect(() => {
