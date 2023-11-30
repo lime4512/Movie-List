@@ -1,13 +1,14 @@
 .film-content {
 	display: flex;
+	font-size: 20px;
 }
 
 .film-img {
-	border-radius: 8px;
 	position: relative;
 	object-fit: cover;
 	height: 453px;
 	width: 302px;
+	margin: 15px;
 }
 
 .film-title-ru {
@@ -15,6 +16,67 @@
 	font-size: 35px;
 }
 
-.film-genres {
+.film-genres,
+.film-countries,
+.film-slogan,
+.film-ageLimits {
 	display: flex;
+}
+
+.imgTotal-film {
+	border-radius: 10px;
+}
+
+.filmDetails-container {
+	margin-top: 20px;
+}
+
+.film-title-original {
+	color: #acaaa5;
+}
+
+.film-opisanie {
+	margin-top: 30px;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.film-genres li,
+.film-countries li {
+	margin-right: 5px;
+}
+
+.film-genres li:last-child,
+.film-countries li:last-child {
+	margin-right: 0px;
+}
+
+.gray {
+	color: #acaaa5;
+}
+
+.film-slogan-title,
+.film-ageLimits-title {
+	margin-right: 5px;
+}
+
+.film-plot {
+	border-top: 2px solid #e8e8e8;
+	display: block;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.film-rating-title {
+	font-weight: 700;
+	font-size: 25px;
+	margin-top: 30px;
+}
+
+.film-plot-text {
+	font-size: 20px;
+}
+
+.film-rating {
+	font-size: 20px;
 }
