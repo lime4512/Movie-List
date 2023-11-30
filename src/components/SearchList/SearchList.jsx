@@ -28,7 +28,9 @@ export const SearchList = ({ searchValue }) => {
 			{searchData.length == 0 ? (
 				<div className='searchList-err'>
 					<h1 className='searchList-err-title'>По запросу ничего не найдено</h1>
-					<p className='searchList-err-subtitle'>Уточни слово поиска или посмотри наши рекомендации</p>
+					<p className='searchList-err-subtitle'>
+						Уточни слово поиска или посмотри наши рекомендации
+					</p>
 				</div>
 			) : (
 				<ul className='searchList-content'>
@@ -39,6 +41,7 @@ export const SearchList = ({ searchValue }) => {
 								titleEn={item.nameEn}
 								img={item.posterUrlPreview}
 								ratingImdb={item.rating}
+								id={item.filmId}
 							/>
 						</li>
 					))}

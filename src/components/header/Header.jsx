@@ -22,11 +22,11 @@ export const Header = () => {
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Трейлеры</a>
+					<a href=''>Релизы</a>
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Случайный фильм</a>
+					<a href=''>Кинопремьеры</a>
 				</li>
 			</ul>
 

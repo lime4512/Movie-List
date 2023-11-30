@@ -40,6 +40,7 @@ export const CardList = ({ page }) => {
 									titleEn={item.nameEu}
 									img={item.posterUrlPreview}
 									ratingImdb={item.ratingImdb}
+									id={item.kinopoiskId}
 								/>
 							</li>
 						))}
