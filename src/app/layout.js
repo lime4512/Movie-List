@@ -1,5 +1,6 @@
 import { Header } from '@/components/header/Header'
 import './globals.scss'
+import { Footer } from '@/components/footer/Footer'
 
 export default function RootLayout({ children }) {
 	return (
@@ -7,6 +8,7 @@ export default function RootLayout({ children }) {
 			<body suppressHydrationWarning={true}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)
