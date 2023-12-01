@@ -10,23 +10,23 @@ export const Header = () => {
 			</div>
 			<ul className='header-nav'>
 				<li className='nav-link'>
-					<a href=''>Дом</a>
+					<Link href='/'>Дом</Link>
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Фильмы</a>
+					<Link href='/movie'>Фильмы</Link>
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Сериалы</a>
+					<Link href='/serials'>Сериалы</Link>
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Релизы</a>
+					<Link href='/release'>Релизы</Link>
 				</li>
 				<li className='header-dash'>|</li>
 				<li className='nav-link'>
-					<a href=''>Кинопремьеры</a>
+					<Link href='/premieres'>Кинопремьеры</Link>
 				</li>
 			</ul>
 

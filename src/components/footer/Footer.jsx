@@ -14,7 +14,7 @@ export const Footer = () => {
 					<a href='https://github.com/lime4512'>GitHub</a>
 				</li>
 				<li>
-					<a href='#'>Telegram</a>
+					<a href='https://t.me/lime4512'>Telegram</a>
 				</li>
 			</ul>
 		</footer>
