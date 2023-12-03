@@ -4,6 +4,7 @@ import './search.scss'
 import { SearchList } from '@/components/SearchList/SearchList'
 import { useDebounce } from '@/hooks/useDebounce'
 import Image from 'next/image'
+import { Container } from '@/components/container/Container'
 
 export default function Search() {
 	const [inpValue, setInpValue] = useState('')
@@ -14,7 +15,7 @@ export default function Search() {
 	}
 
 	return (
-		<section className='main-search'>
+		<Container>
 			<h1 className='search-title'>Поиск</h1>
 			<div className='search-input-content'>
 				<Image
@@ -34,6 +35,6 @@ export default function Search() {
 			</div>
 
 			<SearchList searchValue={debouncedValue} />
-		</section>
+		</Container>
 	)
 }

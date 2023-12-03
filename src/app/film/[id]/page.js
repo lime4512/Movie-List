@@ -1,8 +1,8 @@
 'use client'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import '../film.scss'
 import { FilmDetails } from '@/components/FilmsDetails/FilmDetails'
+import { Container } from '@/components/container/Container'
 export default function Film() {
 	const { id } = useParams()
 
@@ -23,7 +23,7 @@ export default function Film() {
 		MovieApi()
 	}, [id])
 	return (
-		<div className='film-container'>
+		<Container>
 			<FilmDetails
 				countries={dataId.countries}
 				genres={dataId.genres}
@@ -37,6 +37,6 @@ export default function Film() {
 				slogan={dataId.slogan}
 				year={dataId.year}
 			/>
-		</div>
+		</Container>
 	)
 }
