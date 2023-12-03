@@ -3,7 +3,7 @@ import '../../style/cardList.scss'
 import { Card } from './Card'
 import { Loader } from '../loader/Loader'
 
-export const CardList = ({ URL }) => {
+export const CardList = ({ URL, onTotalPage }) => {
 	const [isLoading, setIsLoading] = useState(true)
 	const [data, setData] = useState([])
 
@@ -16,7 +16,10 @@ export const CardList = ({ URL }) => {
 				},
 			})
 				.then(res => res.json())
-				.then(data => setData(data.items))
+				.then(data => {
+					setData(data.items)
+					onTotalPage(data.totalPages)
+				})
 				.catch(err => {
 					console.log(err)
 				})

@@ -17,7 +17,7 @@ export default function Movie() {
 		},
 	})
 	const [page, setPage] = useState(1)
-
+	const [TotalPage, setTotalPage] = useState(13)
 	const handleChange = (event, value) => {
 		setPage(value)
 	}
@@ -36,16 +36,19 @@ export default function Movie() {
 		)
 	}, [page, category])
 
+	const handleTotalPage = page => {
+		setTotalPage(page)
+	}
 	return (
 		<Container>
 			<h1>Фильмы</h1>
 			<MovieSelect onChange={handleCategory} />
 
-			<CardList URL={URL} />
+			<CardList URL={URL} onTotalPage={handleTotalPage} />
 			<div className='cardList-pagination'>
 				<ThemeProvider theme={theme}>
 					<Stack spacing={2}>
-						<Pagination count={13} page={page} onChange={handleChange} />
+						<Pagination count={TotalPage} page={page} onChange={handleChange} />
 					</Stack>
 				</ThemeProvider>
 			</div>
