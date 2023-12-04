@@ -12,7 +12,7 @@ export const CardList = ({ URL, onTotalPage }) => {
 			fetch(`${URL}`, {
 				headers: {
 					'Content-Type': 'application/json',
-					'X-API-KEY': '091dfcfb-8135-4b66-bfa2-776a4810e94d',
+					'X-API-KEY': process.env.NEXT_PUBLIC_API_KEY,
 				},
 			})
 				.then(res => res.json())
@@ -26,12 +26,14 @@ export const CardList = ({ URL, onTotalPage }) => {
 		}
 		MovieApi()
 		setIsLoading(false)
-	}, [URL])
+	}, [URL, onTotalPage])
 	return (
 		<section className='cardList-container'>
 			<div className='cardList-content'>
 				{isLoading ? (
 					<Loader />
+				) : data == undefined ? (
+					<></>
 				) : (
 					<ul className='cardList'>
 						{data.map(item => (

@@ -14,7 +14,7 @@ export default function Film() {
 			fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`, {
 				headers: {
 					'Content-Type': 'application/json',
-					'X-API-KEY': '091dfcfb-8135-4b66-bfa2-776a4810e94d',
+					'X-API-KEY': process.env.NEXT_PUBLIC_API_KEY,
 				},
 			})
 				.then(res => res.json())
@@ -29,7 +29,7 @@ export default function Film() {
 				{
 					headers: {
 						'Content-Type': 'application/json',
-						'X-API-KEY': '091dfcfb-8135-4b66-bfa2-776a4810e94d',
+						'X-API-KEY': process.env.NEXT_PUBLIC_API_KEY,
 					},
 				}
 			)
