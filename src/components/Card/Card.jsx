@@ -19,10 +19,13 @@ export const Card = ({ titleRu, titleEn, img, ratingImdb, id }) => {
 					<h2 className='card-title'>
 						{titleRu == undefined ? titleEn : titleRu}
 					</h2>
-
-					<p className='card-rating'>
-						{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb} Рейтинг`}
-					</p>
+					{ratingImdb == undefined ? (
+						<></>
+					) : (
+						<p className='card-rating'>
+							{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb} Рейтинг`}
+						</p>
+					)}
 				</div>
 			</div>
 		</Link>
