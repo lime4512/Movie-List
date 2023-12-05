@@ -34,7 +34,9 @@ export const Header = () => {
 				<Link href='/search' className='header-btn'>
 					Поиск
 				</Link>
-				<button className='header-btn'>Вход</button>
+				<Link href='api/auth/signin'>
+					<button className='header-btn'>Вход</button>
+				</Link>
 			</div>
 		</header>
 	)
