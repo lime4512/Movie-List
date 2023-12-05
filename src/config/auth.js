@@ -1,9 +1,9 @@
-import GoggleProvider from 'next-auth/providers/google'
+import GithubProvider from 'next-auth/providers/github'
 export const authConfig = {
 	providers: [
-		GoggleProvider({
-			clientId: process.env.GOOGLE_CLIENT_ID,
-			clientSecret: process.env.GOOGLE_GOOGLE_CLIENT_SECRET,
+		GithubProvider({
+			clientId: process.env.GITHUB_ID,
+			clientSecret: process.env.GITHUB_SECRET,
 		}),
 	],
 }
