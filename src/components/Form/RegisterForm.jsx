@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 export const RegisterForm = () => {
 	const [name, setName] = useState('')
 	const [mail, setMail] = useState('')
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
 
+	const router = useRouter()
 	const handelName = event => {
 		setName(event.target.value)
 	}
@@ -39,7 +41,10 @@ export const RegisterForm = () => {
 			if (res.ok) {
 				const form = event.target
 				form.reset()
+				setError('')
+				router.push('/')
 			} else {
+				setError('Не правильные данные введены ')
 				console.log('Регистрация пользователя невозможна ')
 			}
 		} catch (error) {
