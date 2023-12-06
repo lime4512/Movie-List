@@ -1,3 +1,4 @@
+'use client'
 import { RegisterForm } from '@/components/Form/RegisterForm'
 import { Container } from '@/components/container/Container'
 
