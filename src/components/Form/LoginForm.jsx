@@ -27,7 +27,7 @@ export const LoginForm = () => {
 				return
 			}
 
-			router.push('/')
+			router.push('/login')
 		} catch (error) {
 			console.log(error)
 		}
