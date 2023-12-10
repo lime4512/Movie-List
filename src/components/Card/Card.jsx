@@ -1,7 +1,7 @@
 import '../../style/card.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-export const Card = ({ titleRu, titleEn, img, ratingImdb, id }) => {
+export const Card = ({ titleRu, titleEn, img, ratingImdb, id, year }) => {
 	return (
 		<Link href={`/film/${id}`}>
 			<div className='card-container'>
@@ -19,12 +19,14 @@ export const Card = ({ titleRu, titleEn, img, ratingImdb, id }) => {
 					<h2 className='card-title'>
 						{titleRu == undefined ? titleEn : titleRu}
 					</h2>
-					{ratingImdb == undefined ? (
-						<></>
-					) : (
-						<p className='card-rating'>
-							{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb} Рейтинг`}
-						</p>
+					<h3 className='card-year'>{year}</h3>
+					{ratingImdb && (
+						<div className='card-rating'>
+							<Image src='/im.svg' width={30} height={17} alt='img' />
+							<p className='card-rating-num'>
+								{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb}`}
+							</p>
+						</div>
 					)}
 				</div>
 			</div>

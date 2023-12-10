@@ -33,6 +33,7 @@ export const Header = () => {
 				<li className='nav-link'>
 					<Link href='/premieres'>Кинопремьеры</Link>
 				</li>
+				<li className='header-dash'>|</li>
 				<li className='nav-link'>
 					<Link href='/search'>Поиск</Link>
 				</li>

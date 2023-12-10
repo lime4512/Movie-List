@@ -1,7 +1,6 @@
 .card-container {
 	height: 314px;
 	width: 168px;
-	background-color: black;
 	border-radius: 8px;
 }
 
@@ -9,7 +8,7 @@
 	position: relative;
 	object-fit: cover;
 	height: 250px;
-	width: 170px;
+	width: 168px;
 }
 
 .imgTotal-card {
@@ -20,4 +19,21 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	font-weight: 700;
+}
+
+.card-rating {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.card-rating-num {
+	color: #ffc907;
+	font-size: 14px;
+}
+
+.card-year {
+	font-size: 14px;
+	color: #afafaf;
 }

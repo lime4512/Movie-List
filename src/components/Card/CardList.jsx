@@ -27,6 +27,7 @@ export const CardList = ({ URL, onTotalPage }) => {
 		MovieApi()
 		setIsLoading(false)
 	}, [URL, onTotalPage])
+	console.log(data)
 	return (
 		<section className='cardList-container'>
 			<div className='cardList-content'>
@@ -44,6 +45,7 @@ export const CardList = ({ URL, onTotalPage }) => {
 									img={item.posterUrlPreview}
 									ratingImdb={item.ratingImdb}
 									id={item.kinopoiskId}
+									year={item.year}
 								/>
 							</li>
 						))}
