@@ -37,6 +37,7 @@ export default function Release() {
 		}
 		releaseMovie()
 	}, [year, month])
+	console.log(data)
 	return (
 		<Container>
 			<h1>Релизы</h1>
@@ -56,6 +57,7 @@ export default function Release() {
 									img={item.posterUrlPreview}
 									ratingImdb={item.rating}
 									id={item.filmId}
+									year={item.year}
 								/>
 							</li>
 						))}

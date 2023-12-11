@@ -25,6 +25,7 @@ export default function Movie() {
 	const [category, setCategory] = useState('TOP_250_MOVIES')
 	const handleCategory = text => {
 		setCategory(text)
+		setPage(1)
 	}
 	const [URL, setURL] = useState(
 		`https://kinopoiskapiunofficial.tech/api/v2.2/films/collections?type=${category}&page=${page}`

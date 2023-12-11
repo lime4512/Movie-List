@@ -1,0 +1,16 @@
+.select {
+	appearance: none;
+	width: 100%;
+	margin: 10px 0;
+	background-color: transparent;
+	border: 1px white solid;
+	color: white;
+	outline: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.select option {
+	background-color: black;
+}

@@ -37,6 +37,7 @@ export default function Premieres() {
 		}
 		releaseMovie()
 	}, [year, month])
+	console.log(data)
 	return (
 		<Container>
 			<h1>Кинопремьеры</h1>
@@ -57,6 +58,7 @@ export default function Premieres() {
 									img={item.posterUrlPreview}
 									ratingImdb={item.rating}
 									id={item.kinopoiskId}
+									year={item.year}
 								/>
 							</li>
 						))}

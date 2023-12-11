@@ -77,7 +77,7 @@ export const FilmDetails = ({
 					</div>
 					<div className='film-slogan'>
 						<p className='film-slogan-title gray'>Слоган:</p>
-						{slogan == undefined ? <span>-</span> : slogan}
+						{slogan == undefined ? <span>-</span> : slogan.substring(0, 210)}
 					</div>
 
 					<h1 className='film-rating-title'>Рейтинг</h1>
