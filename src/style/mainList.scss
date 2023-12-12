@@ -1,0 +1,13 @@
+.mainList-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.mainList-list li {
+	margin-right: 20px;
+}
+
+.mainList-list:last-child {
+	margin-right: 0px;
+}
