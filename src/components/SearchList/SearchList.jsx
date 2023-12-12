@@ -35,17 +35,18 @@ export const SearchList = ({ searchValue }) => {
 				</div>
 			) : (
 				<ul className='searchList-content'>
-					{searchData.map(item => (
-						<li key={Math.random()} className='searchList-item '>
-							<Card
-								titleRu={item.nameRu}
-								titleEn={item.nameEn}
-								img={item.posterUrlPreview}
-								ratingImdb={item.rating}
-								id={item.filmId}
-							/>
-						</li>
-					))}
+					{searchData &&
+						searchData.map(item => (
+							<li key={Math.random()} className='searchList-item '>
+								<Card
+									titleRu={item.nameRu}
+									titleEn={item.nameEn}
+									img={item.posterUrlPreview}
+									ratingImdb={item.rating}
+									id={item.filmId}
+								/>
+							</li>
+						))}
 				</ul>
 			)}
 		</div>

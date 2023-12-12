@@ -7,8 +7,13 @@
 .cardList-item {
 	margin-right: 20px;
 	margin-bottom: 15px;
+	transition: transform 0.3s ease;
 }
 
 .cardList-item:last-child {
 	margin-right: 0px;
+}
+
+.cardList-item:hover {
+	transform: translateY(-10px);
 }

@@ -43,7 +43,7 @@ export const RegisterForm = () => {
 				const form = event.target
 				form.reset()
 				setError('')
-				router.push('/')
+				router.push('/login')
 			} else {
 				setError('Не правильные данные введены ')
 				console.log('Регистрация пользователя невозможна ')

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 export const Card = ({ titleRu, titleEn, img, ratingImdb, id, year }) => {
 	return (
-		<Link href={`/film/${id}`}>
+		<Link href={`/film/${id}`} className='card-pos'>
 			<div className='card-container'>
 				<div className='card-img'>
 					<Image

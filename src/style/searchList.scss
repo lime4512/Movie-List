@@ -7,6 +7,11 @@
 .searchList-item {
 	margin-right: 20px;
 	margin-bottom: 15px;
+	transition: transform 0.3s ease;
+}
+
+.searchList-item:hover {
+	transform: translateY(-10px);
 }
 
 .searchList-item:last-child {
@@ -20,7 +25,4 @@
 .searchList-err-title {
 	font-weight: 700;
 	font-size: 35px;
-}
-
-.searchList-err-subtitle {
 }

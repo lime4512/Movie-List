@@ -6,8 +6,13 @@
 
 .mainList-list li {
 	margin-right: 20px;
+	transition: transform 0.3s ease;
 }
 
-.mainList-list:last-child {
+.mainList-list li:last-child {
 	margin-right: 0px;
+}
+
+.mainList-list li:hover {
+	transform: translateY(-10px);
 }
