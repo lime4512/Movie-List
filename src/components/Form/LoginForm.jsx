@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import '@/style/LoginForm.scss'
+import '@/style/loginForm.scss'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 export const LoginForm = () => {
@@ -33,26 +33,32 @@ export const LoginForm = () => {
 		}
 	}
 	return (
-		<form onSubmit={handelSubmit}>
-			<h1>Авторизация</h1>
+		<div className='loginForm-container'>
+			<form onSubmit={handelSubmit}>
+				<h1 className='loginForm-title'>Авторизация</h1>
 
-			<input
-				type='mail'
-				name=''
-				id=''
-				placeholder='Почта'
-				onChange={e => setMail(e.target.value)}
-			/>
-			<input
-				type='password'
-				name=''
-				id=''
-				placeholder='Пароль'
-				onChange={e => setPassword(e.target.value)}
-			/>
-			<button>Отправить</button>
-			<Link href='/register'>Регистрация</Link>
-			{error && <div className='login-error'>{error}</div>}
-		</form>
+				<input
+					type='mail'
+					name=''
+					id=''
+					placeholder='Почта'
+					onChange={e => setMail(e.target.value)}
+					className='loginForm-inp'
+				/>
+				<input
+					type='password'
+					name=''
+					id=''
+					placeholder='Пароль'
+					onChange={e => setPassword(e.target.value)}
+					className='loginForm-inp'
+				/>
+				<button className='loginForm-btn'>Отправить</button>
+				<Link href='/register' className='loginForm-link'>
+					Регистрация
+				</Link>
+				{error && <div className='login-error'>{error}</div>}
+			</form>
+		</div>
 	)
 }

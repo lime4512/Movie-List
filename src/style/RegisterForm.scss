@@ -1,4 +1,4 @@
-.loginForm-container {
+.register-content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -13,7 +13,7 @@
 	background-color: rgb(73, 26, 26);
 }
 
-.loginForm-inp {
+.register-inp {
 	font-style: 400 18px 'Roboto', sans-serif;
 	color: black;
 	border-radius: 10px;
@@ -24,7 +24,7 @@
 	font-size: 20px;
 	margin-bottom: 7px;
 }
-.loginForm-btn {
+.register-btn {
 	padding: 7px 25px;
 	border-radius: 10px;
 	border: 1px #8b57c6 solid;
@@ -32,11 +32,11 @@
 	margin: 15px auto;
 	display: block;
 }
-.loginForm-btn:hover {
+.register-btn:hover {
 	background-color: #8b57c6;
 }
 
-.loginForm-title {
+.register-title {
 	color: #8b57c6;
 	text-align: center;
 	font-weight: 700;
@@ -44,14 +44,13 @@
 	margin-bottom: 10px;
 }
 
-.loginForm-link {
+.register-link {
 	font-size: 20px;
 	text-decoration-line: underline;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 10px;
 }
-.loginForm-link:hover {
+.register-link:hover {
 	color: #8b57c6;
 }
 

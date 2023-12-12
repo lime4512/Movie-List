@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import '@/style/RegisterForm.scss'
 export const RegisterForm = () => {
 	const [name, setName] = useState('')
 	const [mail, setMail] = useState('')
@@ -55,14 +56,15 @@ export const RegisterForm = () => {
 
 	return (
 		<div className='register-content'>
-			<h1>Регистрация</h1>
 			<form onSubmit={handleSubmit}>
+				<h1 className='register-title'>Регистрация</h1>
 				<input
 					type='text'
 					name=''
 					id=''
 					placeholder='Имя пользователя'
 					onChange={handelName}
+					className='register-inp'
 				/>
 				<input
 					type='mail'
@@ -70,6 +72,7 @@ export const RegisterForm = () => {
 					id=''
 					placeholder='Почта'
 					onChange={handelMail}
+					className='register-inp'
 				/>
 				<input
 					type='password'
@@ -77,11 +80,14 @@ export const RegisterForm = () => {
 					id=''
 					placeholder='Пароль'
 					onChange={handelPassword}
+					className='register-inp'
 				/>
-				<button>Отправить</button>
+				<button className='register-btn'>Отправить</button>
+				<Link href='/login' className='register-link'>
+					Логин
+				</Link>
+				{error && <div className='login-error'>{error}</div>}
 			</form>
-			<Link href='/register'>Логин</Link>
-			{error && <div className='login-error'>{error}</div>}
 		</div>
 	)
 }
