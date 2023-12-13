@@ -54,6 +54,7 @@ export default function Film() {
 				ratingK={dataId.ratingKinopoisk}
 				slogan={dataId.slogan}
 				year={dataId.year}
+				id={id}
 			/>
 			<Similar sim={simData} />
 		</Container>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../../style/filmDetails.scss'
 import Image from 'next/image'
+import { ModalSources } from '../modalSources/ModalSources'
 export const FilmDetails = ({
 	img,
 	nameO,
@@ -13,6 +14,7 @@ export const FilmDetails = ({
 	description,
 	ratingI,
 	ratingK,
+	id,
 }) => {
 	const [genre, setGenre] = useState([])
 	const [country, serCountry] = useState([])
@@ -36,6 +38,7 @@ export const FilmDetails = ({
 						/>
 					)}
 				</div>
+
 				<div className='film-text'>
 					<h1 className='film-title-ru'>
 						{nameRu == undefined ? nameO : nameRu}
@@ -81,15 +84,18 @@ export const FilmDetails = ({
 					</div>
 
 					<h1 className='film-rating-title'>Рейтинг</h1>
-					<div className='film-rating'>
-						<div className='rating-imdb'>
-							<span className='gray'>Imb: </span>
-							{ratingI == undefined ? <span>-</span> : ratingI}
+					<div className='modal-rating'>
+						<div className='film-rating'>
+							<div className='rating-imdb'>
+								<span className='gray'>Imb: </span>
+								{ratingI == undefined ? <span>-</span> : ratingI}
+							</div>
+							<div className='rating-kinopoisk'>
+								<span className='gray'>Kinopoisk: </span>
+								{ratingK == undefined ? <span>-</span> : ratingK}
+							</div>
 						</div>
-						<div className='rating-kinopoisk'>
-							<span className='gray'>Kinopoisk: </span>
-							{ratingK == undefined ? <span>-</span> : ratingK}
-						</div>
+						<ModalSources id={id} />
 					</div>
 				</div>
 			</div>

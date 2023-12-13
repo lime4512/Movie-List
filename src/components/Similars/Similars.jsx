@@ -1,7 +1,6 @@
 import { Card } from '../Card/Card'
 import '@/style/similars.scss'
 export const Similar = ({ sim }) => {
-	console.log(sim)
 	return (
 		<div className='similar-container'>
 			<h1 className='similar-title'>Похожие фильмы:</h1>

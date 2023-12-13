@@ -1,0 +1,30 @@
+.btn-Sources {
+	transition: 0.4s;
+	text-transform: uppercase;
+	padding: 10px 35px;
+	border-radius: 20.101px;
+	border: 2px solid #8b57c6;
+	cursor: pointer;
+}
+
+.btn-Sources:hover {
+	background: #8b57c6;
+}
+
+.sources-item {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.sources-item:hover {
+	color: #8b57c6;
+}
+
+.title-sources {
+	text-align: center;
+	font-size: 25px;
+	font-weight: 700;
+	color: #8b57c6;
+	margin-bottom: 15px;
+}

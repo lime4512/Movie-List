@@ -37,7 +37,6 @@ export default function Premieres() {
 		}
 		releaseMovie()
 	}, [year, month])
-	console.log(data)
 	return (
 		<Container>
 			<h1>Кинопремьеры</h1>

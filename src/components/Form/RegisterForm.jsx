@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import '@/style/RegisterForm.scss'
+import '@/style/registerForm.scss'
 export const RegisterForm = () => {
 	const [name, setName] = useState('')
 	const [mail, setMail] = useState('')
