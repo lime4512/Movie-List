@@ -1,0 +1,30 @@
+.container-profile {
+	margin-top: 20px;
+	border-radius: 10px;
+	background: rgba(46, 46, 46, 0.96);
+	padding: 20px;
+}
+.title-profile {
+	color: #8b57c6;
+	text-align: center;
+	font-weight: 700;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.text-profile {
+	margin-left: 30px;
+}
+
+.content-profile {
+	display: flex;
+}
+
+.str-profile {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.str-profile span {
+	color: #8b57c6;
+}

@@ -1,13 +1,12 @@
 'use client'
 import { Container } from '@/components/container/Container'
 import { useSession } from 'next-auth/react'
-
+import { ProfileInfo } from '@/components/profileInfo/ProfileInfo'
 export default function Profile() {
 	const { data: session } = useSession()
 	return (
 		<Container>
-			<h1>Профиль</h1>
-			<h1>Имя: {session?.user?.name}</h1>
+			<ProfileInfo name={session?.user?.name} />
 		</Container>
 	)
 }
