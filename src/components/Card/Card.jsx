@@ -21,11 +21,13 @@ export const Card = ({ titleRu, titleEn, img, ratingImdb, id, year }) => {
 					</h2>
 					<h3 className='card-year'>{year}</h3>
 					{ratingImdb && (
-						<div className='card-rating'>
-							<Image src='/im.svg' width={30} height={17} alt='img' />
-							<p className='card-rating-num'>
-								{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb}`}
-							</p>
+						<div className='card-things'>
+							<div className='card-rating'>
+								<Image src='/im.svg' width={30} height={17} alt='img' />
+								<p className='card-rating-num'>
+									{ratingImdb == 'null' ? 'Рейтинга нет' : `${ratingImdb}`}
+								</p>
+							</div>
 						</div>
 					)}
 				</div>

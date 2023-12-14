@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../../style/filmDetails.scss'
 import Image from 'next/image'
 import { ModalSources } from '../modalSources/ModalSources'
+import { Trailers } from '../trailers/Trailers'
 export const FilmDetails = ({
 	img,
 	nameO,
@@ -104,6 +105,10 @@ export const FilmDetails = ({
 				<p className='film-plot-text'>
 					{description == undefined ? <span>-</span> : description}
 				</p>
+			</div>
+			<div className='btn-filmDetails'>
+				<Trailers id={id} />
+				<button className='btn-favorites'>Добавить в избраное</button>
 			</div>
 		</div>
 	)

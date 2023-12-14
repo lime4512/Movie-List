@@ -88,3 +88,20 @@
 	align-items: center;
 	justify-content: space-between;
 }
+
+.btn-filmDetails {
+	margin-top: 10px;
+}
+.btn-favorites {
+	transition: 0.4s;
+	text-transform: uppercase;
+	padding: 10px 35px;
+	border-radius: 20.101px;
+	border: 2px solid #8b57c6;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.btn-favorites:hover {
+	background: #8b57c6;
+}
